@@ -98,7 +98,8 @@ function Header() {
         if (
             path !== '/' &&
             !path.includes('/nft') &&
-            !url.includes('/address')
+            !url.includes('/address') &&
+            !url.includes('/defi') // @info-i helper show defi page
         ) {
             //@todo-i-fixed review the following
             if (!username) {
