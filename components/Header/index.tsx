@@ -192,7 +192,10 @@ function Header() {
                         !loading && (
                             <>
                                 {showSearchBar ? (
-                                    <div id={headerClassName}>
+                                    <div
+                                        className={styles.magSearchbar}
+                                        id={headerClassName}
+                                    >
                                         <div
                                             style={{
                                                 marginTop: searchBarMargin,
