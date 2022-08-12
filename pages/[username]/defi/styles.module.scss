@@ -9,6 +9,7 @@
     background-color: rgba(217, 217, 217, 0.2);
     border: 1px solid #fff;
     border-radius: 5px;
+    align-items: center;
 }
 
 .input {
@@ -40,12 +41,10 @@
 
 .swap {
     width: 100%;
-    padding-right: 80px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    margin-top: -2%;
-    margin-bottom: -8%;
+    margin-right: -25px;
 }
 
 .inputTitle {
@@ -137,11 +136,50 @@
     z-index: 0;
 }
 
+.dottedLine {
+    width: 320px;
+    margin-left: -20px;
+    height: 80px;
+    margin-bottom: -50px;
+    margin-top: -30px;
+    border-radius: 5px;
+    text-align: center;
+    background: linear-gradient(
+            to right,
+            rgb(117, 117, 117) 50%,
+            rgba(255, 255, 255, 0) 0%
+        ),
+        linear-gradient(rgb(0, 0, 0) 50%, rgba(255, 255, 255, 0) 0%),
+        linear-gradient(
+            to right,
+            rgb(117, 117, 117) 50%,
+            rgba(255, 255, 255, 0) 0%
+        ),
+        linear-gradient(rgb(117, 117, 117) 50%, rgba(255, 255, 255, 0) 0%);
+    background-position: top, right, bottom, left;
+    background-repeat: repeat-x, repeat-y;
+    background-size: 10px 1px, 1px 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.triangle {
+    margin-left: -10px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 10px solid #757575;
+}
+
 @media only screen and (max-width: 700px) {
     .input {
         width: 60%;
     }
     .txtZil {
         font-size: 10px;
+    }
+    .dottedLine {
+        background: transparent;
     }
 }

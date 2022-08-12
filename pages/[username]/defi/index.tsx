@@ -29,81 +29,86 @@ function Header() {
                 )}
                 <div>
                     <div>
-                        <div className={styles.headerInput}>
-                            <div className={styles.inputTitle}>FROM</div>
-                            <div className={styles.txtBal}>
-                                • BALANCE : 5456.54
-                            </div>
-                        </div>
-                        <div className={styles.selectorWrapper}>
-                            <div className={styles.inputWrapper}>
-                                <input className={styles.input} />
-                                <div
-                                    onClick={() => setShowDropdown('1')}
-                                    className={styles.dropdownWrapper}
-                                >
-                                    <Image
-                                        width={17}
-                                        height={17}
-                                        src={zilIco}
-                                    />
-                                    <div>ZIL</div>
-                                    <Image src={arrowDownIco} />
+                        <div>
+                            <div className={styles.headerInput}>
+                                <div className={styles.inputTitle}>FROM</div>
+                                <div className={styles.txtBal}>
+                                    • BALANCE : 5456.54
                                 </div>
                             </div>
-                            {showDropdown === '1' && (
-                                <div className={styles.dropdownList}>
-                                    {currency.map((data, i) => (
-                                        <div
-                                            className={styles.txtDropdown}
-                                            key={i}
-                                        >
-                                            {data}
-                                        </div>
-                                    ))}
+                            <div className={styles.selectorWrapper}>
+                                <div className={styles.inputWrapper}>
+                                    <input className={styles.input} />
+                                    <div
+                                        onClick={() => setShowDropdown('1')}
+                                        className={styles.dropdownWrapper}
+                                    >
+                                        <Image
+                                            width={17}
+                                            height={17}
+                                            src={zilIco}
+                                        />
+                                        <div>ZIL</div>
+                                        <Image src={arrowDownIco} />
+                                    </div>
                                 </div>
-                            )}
-                        </div>
-                    </div>
-                    <div className={styles.swap}>
-                        <Image width={50} height={50} src={swapIco} />
-                    </div>
-                    <div>
-                        <div className={styles.headerInput}>
-                            <div className={styles.inputTitle}>TO</div>
-                        </div>
-                        <div className={styles.selectorWrapper}>
-                            <div className={styles.inputWrapper}>
-                                <input className={styles.input} />
-                                <div
-                                    onClick={() => setShowDropdown('2')}
-                                    className={styles.dropdownWrapper}
-                                >
-                                    <Image
-                                        width={17}
-                                        height={17}
-                                        src={usdIco}
-                                    />
-                                    <div>USD</div>
-                                    <Image src={arrowDownIco} />
-                                </div>
+                                {showDropdown === '1' && (
+                                    <div className={styles.dropdownList}>
+                                        {currency.map((data, i) => (
+                                            <div
+                                                className={styles.txtDropdown}
+                                                key={i}
+                                            >
+                                                {data}
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
                             </div>
-                            {showDropdown === '2' && (
-                                <div className={styles.dropdownList}>
-                                    {currency.map((data, i) => (
-                                        <div
-                                            className={styles.txtDropdown}
-                                            key={i}
-                                        >
-                                            {data}
-                                        </div>
-                                    ))}
-                                </div>
-                            )}
                         </div>
-                        <div className={styles.toFooter}>
-                            <div className={styles.txtBal}>
-                                • BALANCE : 5456.54
+                        <div className={styles.dottedLine}>
+                            <div className={styles.swap}>
+                                <Image width={50} height={50} src={swapIco} />
+                            </div>
+                        </div>
+                        <div>
+                            <div className={styles.headerInput}>
+                                <div className={styles.inputTitle}>TO</div>
+                            </div>
+                            <div className={styles.selectorWrapper}>
+                                <div className={styles.inputWrapper}>
+                                    <div className={styles.triangle} />
+                                    <input className={styles.input} />
+                                    <div
+                                        onClick={() => setShowDropdown('2')}
+                                        className={styles.dropdownWrapper}
+                                    >
+                                        <Image
+                                            width={17}
+                                            height={17}
+                                            src={usdIco}
+                                        />
+                                        <div>USD</div>
+                                        <Image src={arrowDownIco} />
+                                    </div>
+                                </div>
+                                {showDropdown === '2' && (
+                                    <div className={styles.dropdownList}>
+                                        {currency.map((data, i) => (
+                                            <div
+                                                className={styles.txtDropdown}
+                                                key={i}
+                                            >
+                                                {data}
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
+                            </div>
+                            <div className={styles.toFooter}>
+                                <div className={styles.txtBal}>
+                                    • BALANCE : 5456.54
+                                </div>
                             </div>
                         </div>
                     </div>
