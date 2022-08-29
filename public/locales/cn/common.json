@@ -63,6 +63,7 @@
     "BUY NFT USERNAME": "购买 NFT 用户名",
     "Recipient (address):": "持有者 （地址）:",
     "NFT USERNAME": "NFT 用户名",
+    "NFT USERNAMES": "NFT 用户名",
     "DECENTRALIZED IDENTITY": "去中心化身份",
     "DID": "去中心化(DID）",
     "WALLET": "钱包",
@@ -328,10 +329,13 @@
     "CHOOSE YOUR NFT USERNAME": "搜索NFT用户名",
     "DONATE": "捐款",
     "Send money to": "发送资金给 {{name}}",
-    "Log in for full functionality.": "Log in for full functionality.",
-    "Type beneficiary address": "Type beneficiary address",
+    "Log in for full functionality.": "登录以获得完整功能。",
+    "Type beneficiary address": "输入收款人地址",
     "NFT OPERATIONS": "NFT OPERATIONS",
     "MANAGE NFT": "MANAGE NFT",
     "Invalid username": "用户名无效",
-    "WITHDRAW FUNDS": "WITHDRAW FUNDS"
+    "WITHDRAW FUNDS": "WITHDRAW FUNDS",
+    "UPDATE SOCIAL TREE": "UPDATE SOCIAL TREE",
+    "Select source": "Select source",
+    "Type label": "Type label"
 }
