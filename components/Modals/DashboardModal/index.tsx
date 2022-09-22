@@ -292,17 +292,15 @@ function Component() {
                                     `https://v2.viewblock.io/zilliqa/tx/${deploy[0].ID}?network=${net}`
                                 )
                             }, 1000)
-                            let new_ssi = deploy[1].address
-                            // new_ssi = zcrypto.toChecksumAddress(new_ssi)
-                            alert(JSON.stringify(deploy[1].address))
-                            // console.log(JSON.stringify(deploy[1].address))
+                            let new_ssi = deploy[1]?.address
+                            new_ssi = zcrypto.toChecksumAddress(new_ssi)
                             updateBuyInfo(null)
                             dispatch(updateLoginInfoUsername(null!))
-                            // dispatch(
-                            //     updateLoginInfoAddress(
-                            //         zcrypto.toChecksumAddress(new_ssi)
-                            //     )
-                            // )
+                            dispatch(
+                                updateLoginInfoAddress(
+                                    zcrypto.toChecksumAddress(new_ssi)
+                                )
+                            )
                             updateDashboardState('loggedIn')
                             updateModalTx(false)
                             updateModalBuyNft(false)
