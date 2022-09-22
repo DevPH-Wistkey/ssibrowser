@@ -284,8 +284,12 @@ function Component() {
                         dispatch(setTxStatusLoading('submitted'))
 
                         tx = await tx.confirm(deploy[0].ID, 33)
-                        alert(JSON.stringify(tx))
                         console.log(tx)
+                        if (tx.isConfirmed()) {
+                            alert('ok')
+                        } else if (tx.isRejected()) {
+                            alert('fail')
+                        }
                         // if (tx.isConfirmed()) {
                         //     dispatch(setTxStatusLoading('confirmed'))
                         //     setTimeout(() => {
