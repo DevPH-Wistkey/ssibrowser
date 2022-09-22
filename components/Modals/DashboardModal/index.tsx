@@ -286,34 +286,29 @@ function Component() {
                         tx = await tx.confirm(deploy[0].ID, 33)
                         console.log(tx)
                         if (tx.isConfirmed()) {
-                            alert('ok')
+                            dispatch(setTxStatusLoading('confirmed'))
+                            setTimeout(() => {
+                                window.open(
+                                    `https://v2.viewblock.io/zilliqa/tx/${deploy[0].ID}?network=${net}`
+                                )
+                            }, 1000)
+                            // let new_ssi = deploy[1].address
+                            // new_ssi = zcrypto.toChecksumAddress(new_ssi)
+                            // updateBuyInfo(null)
+                            // dispatch(updateLoginInfoUsername(null!))
+                            // dispatch(
+                            //     updateLoginInfoAddress(
+                            //         zcrypto.toChecksumAddress(new_ssi)
+                            //     )
+                            // )
+                            updateDashboardState('loggedIn')
+                            updateModalTx(false)
+                            updateModalBuyNft(false)
+                            Router.push('/address')
                         } else if (tx.isRejected()) {
-                            alert('fail')
+                            // setLoadingSsi(false)
+                            dispatch(setTxStatusLoading('failed'))
                         }
-                        // if (tx.isConfirmed()) {
-                        //     dispatch(setTxStatusLoading('confirmed'))
-                        //     setTimeout(() => {
-                        //         window.open(
-                        //             `https://v2.viewblock.io/zilliqa/tx/${deploy[0].ID}?network=${net}`
-                        //         )
-                        //     }, 1000)
-                        //     let new_ssi = deploy[1].address
-                        //     new_ssi = zcrypto.toChecksumAddress(new_ssi)
-                        //     updateBuyInfo(null)
-                        //     dispatch(updateLoginInfoUsername(null!))
-                        //     dispatch(
-                        //         updateLoginInfoAddress(
-                        //             zcrypto.toChecksumAddress(new_ssi)
-                        //         )
-                        //     )
-                        //     updateDashboardState('loggedIn')
-                        //     updateModalTx(false)
-                        //     updateModalBuyNft(false)
-                        //     Router.push('/address')
-                        // } else if (tx.isRejected()) {
-                        //     // setLoadingSsi(false)
-                        //     dispatch(setTxStatusLoading('failed'))
-                        // }
                     })
                     .catch((error) => {
                         throw error
