@@ -294,7 +294,7 @@ function Component() {
                             }, 1000)
                             let new_ssi = deploy[1].address
                             // new_ssi = zcrypto.toChecksumAddress(new_ssi)
-                            alert(deploy[1])
+                            alert(JSON.stringify(deploy[1]))
                             updateBuyInfo(null)
                             dispatch(updateLoginInfoUsername(null!))
                             // dispatch(
