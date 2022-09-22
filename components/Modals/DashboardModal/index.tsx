@@ -292,10 +292,11 @@ function Component() {
                                     `https://v2.viewblock.io/zilliqa/tx/${deploy[0].ID}?network=${net}`
                                 )
                             }, 1000)
-                            // let new_ssi = deploy[1].address
-                            // new_ssi = zcrypto.toChecksumAddress(new_ssi)
-                            // updateBuyInfo(null)
-                            // dispatch(updateLoginInfoUsername(null!))
+                            let new_ssi = deploy[1].address
+                            new_ssi = zcrypto.toChecksumAddress(new_ssi)
+                            alert(new_ssi)
+                            updateBuyInfo(null)
+                            dispatch(updateLoginInfoUsername(null!))
                             // dispatch(
                             //     updateLoginInfoAddress(
                             //         zcrypto.toChecksumAddress(new_ssi)
